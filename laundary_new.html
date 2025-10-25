@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Laundry Wallah / Laundry Mart</title>
+
+  <!-- Simple reset and modern fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="laundaru_img.png" rel="stylesheet">
+
+  <style>
+    :root{
+      --accent:#1e90ff; 
+      --muted:#6b7280;
+      --bg:#f7fafc;
+      --card:#ffffff;
+      --radius:12px;
+      --max-width:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background:linear-gradient(180deg,#fdfcff 0%, var(--bg) 100%);
+      color:#111827;
+      line-height:1.45;
+      padding:28px;
+      display:flex;
+      justify-content:center;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      background:var(--card);
+      border-radius:16px;
+      box-shadow:0 8px 30px rgba(15,23,42,0.08);
+      padding:28px;
+      border:1px solid rgba(0,0,0,0.06);
+    }
+
+    header{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      margin-bottom:18px;
+    }
+    .brand h1{
+      margin:0;
+      font-size:28px;
+      font-weight:700;
+    }
+    .brand p{
+      margin:4px 0 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .hero{
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:22px;
+      align-items:start;
+      margin-top:8px;
+    }
+
+    .intro p{
+      margin:0 0 12px 0;
+      color:var(--muted);
+    }
+
+    .services, .price, .book {
+      background: #fff;
+      border-radius:10px;
+      padding:16px;
+      border:1px solid rgba(0,0,0,0.04);
+      margin-bottom:16px;
+    }
+
+    .services h2, .price h3, .book h3 {
+      margin:0 0 10px 0;
+      font-size:18px;
+    }
+
+    .services ul{
+      margin:0;
+      padding-left:20px;
+      color:var(--muted);
+    }
+
+    .image-wrap{
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+    }
+
+    .image-wrap img{
+      max-width:100%;
+      height:auto;
+      border-radius:10px;
+      box-shadow:0 6px 20px rgba(16,24,40,0.06);
+    }
+
+    /* Price table */
+    table{
+      width:100%;
+      border-collapse:collapse;
+      font-size:14px;
+    }
+    table thead th{
+      text-align:left;
+      padding:8px;
+      font-weight:600;
+      border-bottom:2px solid rgba(0,0,0,0.06);
+    }
+    table tbody td{
+      padding:8px;
+      border-bottom:1px solid rgba(0,0,0,0.04);
+      color:var(--muted);
+    }
+
+    /* Booking form */
+    .book form{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+    }
+    .book label{
+      font-size:13px;
+      color:var(--muted);
+      width:100%;
+    }
+    .field{
+      flex:1 1 220px;
+      min-width:160px;
+    }
+    input[type="text"], input[type="email"], input[type="tel"], textarea {
+      width:100%;
+      padding:8px 10px;
+      border-radius:8px;
+      border:1px solid rgba(0,0,0,0.08);
+      background:linear-gradient(180deg,#fff,#fcfdff);
+      font-size:14px;
+    }
+    textarea{min-height:80px; resize:vertical;}
+
+    .submit-row{
+      display:flex;
+      gap:8px;
+      align-items:center;
+      margin-left:auto;
+    }
+    button.btn{
+      background:var(--accent);
+      color:white;
+      padding:9px 14px;
+      border-radius:8px;
+      border:0;
+      cursor:pointer;
+      font-weight:600;
+    }
+    button.btn:active{transform:translateY(1px)}
+
+    /* Footer contact line */
+    .contact{
+      margin-top:12px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* Responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;}
+      .image-wrap{order:-1}
+      .submit-row{margin-left:0; width:100%;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <div class="brand" aria-labelledby="title">
+        <h1 id="title">Welcome to Laundry Wallah / Laundry Mart</h1>
+        <p>Your one-stop solution for all your laundry needs. Hassle-free, quality care for your garments.</p>
+      </div>
+    </header>
+
+    <section class="hero" aria-label="Main">
+      <div class="intro">
+        <p>Welcome to Laundry Wallah / Laundry Mart, our dedicated team ensures top-notch service, providing a hassle-free and efficient laundry experience. With a focus on quality and customer satisfaction, we take care of your garments as if they were our own.</p>
+
+        <div class="services" aria-labelledby="services-title">
+          <h2 id="services-title">Our Services</h2>
+          <ul>
+            <li>Washing and Drying</li>
+            <li>Ironing and Folding</li>
+            <li>Dry Cleaning</li>
+            <li>Stain Removal</li>
+            <li>Express Services</li>
+            <li>Special Garment Care</li>
+            <li>And more...</li>
+          </ul>
+        </div>
+
+        <div class="price" aria-labelledby="price-title">
+          <h3 id="price-title">Price List</h3>
+          <table aria-describedby="price-desc">
+            <thead>
+              <tr><th>Service</th><th>Price</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Washing and Drying</td><td>$10.00</td></tr>
+              <tr><td>Ironing and Folding</td><td>$5.00</td></tr>
+              <tr><td>Dry Cleaning (Shirt)</td><td>$8.00</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <aside class="image-wrap" aria-label="Laundry image">
+        <!-- Replace the src with your local image path if needed -->
+        <img src="laundaru_img.png"
+             alt="Washing machine with laundry illustration" />
+      </aside>
+    </section>
+
+    <section class="book" aria-labelledby="book-title">
+      <h3 id="book-title">Book Now</h3>
+
+      <form id="bookingForm" onsubmit="return handleSubmit(event)" novalidate>
+        <label class="field">
+          <span style="font-weight:600; display:block; margin-bottom:6px">Name</span>
+          <input id="name" name="name" type="text" placeholder="Your full name" required />
+        </label>
+
+        <label class="field">
+          <span style="font-weight:600; display:block; margin-bottom:6px">Email</span>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+        </label>
+
+        <label class="field">
+          <span style="font-weight:600; display:block; margin-bottom:6px">Phone</span>
+          <input id="phone" name="phone" type="tel" placeholder="+1 555 555 5555" />
+        </label>
+
+        <label style="flex-basis:100%">
+          <span style="font-weight:600; display:block; margin-bottom:6px">Notes / Service details</span>
+          <textarea id="notes" name="notes" placeholder="Tell us about your order (items, special care)"></textarea>
+        </label>
+
+        <div class="submit-row" style="flex-basis:100%; margin-top:8px;">
+          <button class="btn" type="submit">Submit</button>
+          <div id="formMsg" style="align-self:center;color:var(--muted); font-size:13px;"></div>
+        </div>
+      </form>
+
+      <p class="contact">Contact us at: <a href="mailto:info@laundrymart.com">info@laundrymart.com</a></p>
+    </section>
+  </div>
+
+  <script>
+    // Simple front-end form handler (demo only)
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const notes = document.getElementById('notes').value.trim();
+      const msgEl = document.getElementById('formMsg');
+
+      if(!name || !email){
+        msgEl.textContent = 'Please enter name and email.';
+        msgEl.style.color = 'crimson';
+        return false;
+      }
+
+      // Here you'd normally send data to a server via fetch()
+      // Demo: show success and clear form
+      msgEl.style.color = 'green';
+      msgEl.textContent = 'Thanks! Your booking request has been received.';
+      document.getElementById('bookingForm').reset();
+
+      // Optional: log data to console (for testing)
+      console.info('Booking:', { name, email, phone, notes });
+
+      return false;
+    }
+  </script>
+</body>
+</html>
